@@ -72,17 +72,17 @@ int playerMove(int *row, int *col){
     if(scanf(" %c%d", &column, row) == 2){
         if(column < 'A' || column > 'J'){
             printf("Invalid column letter. Try again!\n");
-            return -1; // check why this is here 
+            return -1; 
         }
         *col = column - 'A';
         if(*row < 1 || *row >10){
             printf("Invalid row number. Try again!\n");
-            return -1; //check this again
+            return -1; 
         }    
         *row -= 1;
         return 0;
     }
-    return -1; //check this again
+    return -1; 
 }
 
 int checkHit(char fileBoard[][SIZE], char userBoard[][SIZE], int row, int col){
